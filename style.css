@@ -664,6 +664,11 @@ input[type="radio"]:checked::after {
   .links {
     display: none;
   }
+  .footerNav .links {
+    display: flex !important;
+    height: auto;
+    justify-content: center;
+  }
   .links.active {
     display: flex;
     position: absolute;
@@ -750,7 +755,11 @@ input[type="radio"]:checked::after {
   }
   .footerNav .links ul {
     flex-direction: column;
+    align-items: center;
     gap: 15px;
+  }
+  .footerNav .links ul li.hide {
+    display: block !important;
   }
   .footerContactus {
     flex-direction: column;
@@ -771,5 +780,15 @@ input[type="radio"]:checked::after {
   .privacyPolicy {
     flex-direction: column;
     gap: 15px;
+  }
+}
+
+@media (max-width: 450px) {
+  .footerNav .links ul {
+    flex-direction: column;
+    align-items: center;
+  }
+  .footerNav .links ul li.hide {
+    display: block;
   }
 }
